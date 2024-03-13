@@ -203,7 +203,6 @@ public class Database : OsirisSerializable
         Parameters = new ParameterList();
         Parameters.Read(reader);
 
-        FactsPosition = reader.BaseStream.Position;
         Facts = new FactCollection(this, reader.Story);
         reader.ReadList<Fact>(Facts);
     }
